@@ -4,9 +4,9 @@
 
 **Repository:** https://github.com/TheBoxer71/OmniTiler
 
-**ID:** `fredrick.omnitiler`
+**ID:** `theboxer71.omnitiler`
 
-**Version:** 0.1.1
+**Version:** 0.1.2
 **Author:** Fredrick Thorsen
 
 **License:** MIT

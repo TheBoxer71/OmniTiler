@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "id": "fredrick.omnitiler",
+  "id": "theboxer71.omnitiler",
   "name": "OmniTiler — Ultrawide Window Tiler for Omarchy",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "author": "Fredrick Thorsen",
   "license": "MIT",
   "description": "Center-first ultrawide window tiling for Omarchy and Hyprland: fixed 30/40/30 columns, automatic workspace overflow, and a theme-aware bar toggle.",

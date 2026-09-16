@@ -10,7 +10,7 @@ import subprocess
 import tempfile
 import time
 
-ID = "fredrick.omnitiler"
+ID = "theboxer71.omnitiler"
 SOURCE = Path(__file__).resolve().parent
 CONFIG = Path(os.environ.get("XDG_CONFIG_HOME", Path.home() / ".config")) / "omarchy"
 TARGET = CONFIG / "plugins" / ID

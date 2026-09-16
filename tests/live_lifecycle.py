@@ -42,18 +42,18 @@ def main():
         wait_for(client, "Lifecycle demo failed to open")
         ipc("activate")
         wait_for(lambda: client()["floating"], "Activation did not float demo")
-        run("omarchy", "plugin", "disable", "fredrick.omnitiler")
+        run("omarchy", "plugin", "disable", "theboxer71.omnitiler")
         # Disable destroys the QML owner; cleanup must work without a prior IPC deactivate.
         until = time.monotonic() + 8
         while client()["floating"] and time.monotonic() < until:
             time.sleep(0.1)
         assert not client()["floating"], "QML destruction left a managed window floating"
         checks.append("Direct plugin disable restores managed windows")
-        run("omarchy", "plugin", "enable", "fredrick.omnitiler", "--section", "center", "--after", "omarchy.clock")
+        run("omarchy", "plugin", "enable", "theboxer71.omnitiler", "--section", "center", "--after", "omarchy.clock")
         time.sleep(1)
         ipc("activate")
         wait_for(lambda: client()["floating"], "Re-enable failed")
-        pids = run("pgrep", "-f", "^/usr/bin/python3 -u .*/fredrick.omnitiler/engine.py$").splitlines()
+        pids = run("pgrep", "-f", "^/usr/bin/python3 -u .*/theboxer71.omnitiler/engine.py$").splitlines()
         assert len(pids) == 1, pids
         os.kill(int(pids[0]), signal.SIGKILL)
         wait_for(lambda: bool(ipc("status")["error"]), "Helper termination not reflected in status")
@@ -62,7 +62,7 @@ def main():
         checks.append("Forced helper kill is reported; next start restores journaled windows")
 
         # Test EOF cleanup independently of Quickshell.
-        run("omarchy", "plugin", "disable", "fredrick.omnitiler")
+        run("omarchy", "plugin", "disable", "theboxer71.omnitiler")
         worker = subprocess.Popen([sys.executable, "-u", str(ROOT / "engine.py")],
                                   stdin=subprocess.PIPE, stdout=subprocess.PIPE, text=True)
         try:
@@ -84,10 +84,10 @@ def main():
         config = json.loads(config_path.read_text())
         expected = json.loads(json.dumps(initial_config))
         for entries in expected["bar"]["layout"].values():
-            entries[:] = [e for e in entries if e["id"] != "fredrick.omnitiler"]
-        expected["plugins"] = [e for e in expected.get("plugins", []) if e["id"] != "fredrick.omnitiler"]
+            entries[:] = [e for e in entries if e["id"] != "theboxer71.omnitiler"]
+        expected["plugins"] = [e for e in expected.get("plugins", []) if e["id"] != "theboxer71.omnitiler"]
         assert config == expected, "Removal changed unrelated shell settings"
-        assert not (Path.home() / ".config/omarchy/plugins/fredrick.omnitiler").exists()
+        assert not (Path.home() / ".config/omarchy/plugins/theboxer71.omnitiler").exists()
         run(sys.executable, str(ROOT / "manage.py"), "install")
         time.sleep(1)
         assert json.loads(config_path.read_text()) == initial_config

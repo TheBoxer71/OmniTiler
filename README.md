@@ -46,7 +46,7 @@ Install from [TheBoxer71/OmniTiler](https://github.com/TheBoxer71/OmniTiler):
 
 ```sh
 omarchy plugin add https://github.com/TheBoxer71/OmniTiler --enable
-omarchy plugin enable fredrick.omnitiler --section center --after omarchy.clock
+omarchy plugin enable theboxer71.omnitiler --section center --after omarchy.clock
 ```
 
 The second command places the icon immediately beside the centered clock.
@@ -54,8 +54,8 @@ Enabling the plugin loads its toggle; window tiling starts off until clicked.
 For a Git-managed installation, update or remove with:
 
 ```sh
-omarchy plugin update fredrick.omnitiler
-omarchy plugin remove fredrick.omnitiler
+omarchy plugin update theboxer71.omnitiler
+omarchy plugin remove theboxer71.omnitiler
 ```
 
 ### Local development installation
@@ -69,13 +69,30 @@ python3 manage.py install
 ```
 
 This validates and copies the plugin into
-`~/.config/omarchy/plugins/fredrick.omnitiler/`, then enables its bar widget
+`~/.config/omarchy/plugins/theboxer71.omnitiler/`, then enables its bar widget
 immediately after the clock. It backs up `shell.json` under
 `~/.local/state/omnitiler/backups/` and leaves the centered clock anchor intact.
 Run the same command to update a local installation.
 
 Use either the Git-managed installation or the local development installer;
 the latter installs a copy and is updated by rerunning `manage.py install`.
+
+### Upgrading from 0.1.1 or earlier
+
+Version 0.1.2 changes the plugin ID from `fredrick.omnitiler` to
+`theboxer71.omnitiler`. Remove the previous ID before installing the new one;
+an in-place plugin update cannot migrate its registration and directory.
+
+```sh
+omarchy-shell omnitiler deactivate
+omarchy plugin remove fredrick.omnitiler
+omarchy plugin add https://github.com/TheBoxer71/OmniTiler --enable
+omarchy plugin enable theboxer71.omnitiler --section center --after omarchy.clock
+```
+
+For a local development installation, remove the old ID as above, then run
+`python3 manage.py install` from the updated checkout instead of `plugin add`.
+The IPC target remains `omnitiler`, and the author remains Fredrick Thorsen.
 
 ## Controls and IPC
 

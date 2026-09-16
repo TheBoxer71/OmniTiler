@@ -4,7 +4,7 @@ import qs.Commons
 
 BarWidget {
     id: root
-    moduleName: "fredrick.omnitiler"
+    moduleName: "theboxer71.omnitiler"
     property var service: null
     implicitWidth: button.implicitWidth
     implicitHeight: barSize

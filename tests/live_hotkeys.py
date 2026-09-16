@@ -99,13 +99,13 @@ def main():
         results.append("Disabling OmniTiler restores the original binding definitions")
         ipc("activate")
         wait_for(lambda: clients()[3]["floating"], "Reactivation failed")
-        subprocess.run(["omarchy", "plugin", "disable", "fredrick.omnitiler"], check=True, capture_output=True)
+        subprocess.run(["omarchy", "plugin", "disable", "theboxer71.omnitiler"], check=True, capture_output=True)
         until = time.monotonic() + 8
         while clients()[3]["floating"] and time.monotonic() < until:
             time.sleep(0.1)
         assert not clients()[3]["floating"] and binds() == baseline, "Unload did not restore tiling and shortcuts"
         results.append("Plugin unload restores native shortcuts through the recovery watcher")
-        subprocess.run(["omarchy", "plugin", "enable", "fredrick.omnitiler", "--section", "center",
+        subprocess.run(["omarchy", "plugin", "enable", "theboxer71.omnitiler", "--section", "center",
                         "--after", "omarchy.clock"], check=True, capture_output=True)
         time.sleep(0.8)
         (ROOT / "test-results/hotkeys.json").write_text(json.dumps(results, indent=2) + "\n")
@@ -114,7 +114,7 @@ def main():
         try:
             ipc("deactivate")
         except Exception:
-            subprocess.run(["omarchy", "plugin", "enable", "fredrick.omnitiler", "--section", "center",
+            subprocess.run(["omarchy", "plugin", "enable", "theboxer71.omnitiler", "--section", "center",
                             "--after", "omarchy.clock"], check=True, capture_output=True)
         time.sleep(0.3)
         for p in children:
