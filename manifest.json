@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "fredrick.omnitiler",
+  "name": "OmniTiler — Ultrawide Window Tiler for Omarchy",
+  "version": "0.1.1",
+  "author": "Fredrick Thorsen",
+  "license": "MIT",
+  "description": "Center-first ultrawide window tiling for Omarchy and Hyprland: fixed 30/40/30 columns, automatic workspace overflow, and a theme-aware bar toggle.",
+  "kinds": ["bar-widget", "service"],
+  "entryPoints": {"barWidget": "BarWidget.qml", "service": "Service.qml"},
+  "barWidget": {
+    "displayName": "OmniTiler",
+    "description": "Toggle center-first ultrawide tiling on the current workspace",
+    "category": "System",
+    "allowMultiple": false,
+    "defaultSection": "center"
+  }
+}
