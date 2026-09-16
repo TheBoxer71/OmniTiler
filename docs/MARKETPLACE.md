@@ -6,7 +6,7 @@
 
 **ID:** `theboxer71.omnitiler`
 
-**Version:** 0.1.2
+**Version:** 0.1.1
 **Author:** Fredrick Thorsen
 
 **License:** MIT

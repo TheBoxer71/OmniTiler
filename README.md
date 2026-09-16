@@ -77,23 +77,6 @@ Run the same command to update a local installation.
 Use either the Git-managed installation or the local development installer;
 the latter installs a copy and is updated by rerunning `manage.py install`.
 
-### Upgrading from 0.1.1 or earlier
-
-Version 0.1.2 changes the plugin ID from `fredrick.omnitiler` to
-`theboxer71.omnitiler`. Remove the previous ID before installing the new one;
-an in-place plugin update cannot migrate its registration and directory.
-
-```sh
-omarchy-shell omnitiler deactivate
-omarchy plugin remove fredrick.omnitiler
-omarchy plugin add https://github.com/TheBoxer71/OmniTiler --enable
-omarchy plugin enable theboxer71.omnitiler --section center --after omarchy.clock
-```
-
-For a local development installation, remove the old ID as above, then run
-`python3 manage.py install` from the updated checkout instead of `plugin add`.
-The IPC target remains `omnitiler`, and the author remains Fredrick Thorsen.
-
 ## Controls and IPC
 
 - **Left click:** toggle this workspace and its overflow set.

@@ -84,16 +84,3 @@ Root-level `preview.png` is a generated promotional illustration, 1672×941
 pixels, below the marketplace's 50 MB / 40 megapixel input limits. It is distinct
 from the real screenshots in `docs/`. The exact generation prompt and source
 requirements are recorded in [marketplace-image-prompt.md](marketplace-image-prompt.md).
-
-## Plugin ID migration — 0.1.2
-
-- All 18 controller tests, manifest validation, and QML checks pass with
-  `theboxer71.omnitiler`.
-- Migrated the local installation from `fredrick.omnitiler`, backing up shell
-  settings before removal and installation. The old plugin directory is gone.
-- Compared shell settings before and after: only the plugin ID changed; the
-  clock anchor, bar order, and unrelated settings were preserved.
-- Verified the renamed widget/service loads and reports no error. Restored the
-  previously active three-window layout with identical slots and original focus.
-- Earlier live desktop test results above remain applicable to unchanged tiling
-  behavior; live test scripts now reference the new ID.

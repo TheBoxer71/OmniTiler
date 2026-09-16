@@ -1,11 +1,5 @@
 # Changelog
 
-## 0.1.2 — 2026-09-16
-
-- Rename the plugin ID from `fredrick.omnitiler` to `theboxer71.omnitiler`.
-- Update widget service lookup, installation paths, commands, and live tests.
-- Document migration from the previous ID; the repository and IPC target remain unchanged.
-
 ## 0.1.1 — 2026-09-16
 
 - Support Omarchy's Super+Shift+Left/Right for moving and swapping columns.
