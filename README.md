@@ -42,10 +42,10 @@ does not edit Hyprland configuration or require root access.
 
 ## Install
 
-Install from [TheBoxer71/OmniTiler](https://github.com/TheBoxer71/OmniTiler):
+Install from [PixDevsApps/OmniTiler](https://github.com/PixDevsApps/OmniTiler):
 
 ```sh
-omarchy plugin add https://github.com/TheBoxer71/OmniTiler --enable
+omarchy plugin add https://github.com/PixDevsApps/OmniTiler --enable
 omarchy plugin enable theboxer71.omnitiler --section center --after omarchy.clock
 ```
 
@@ -63,7 +63,7 @@ omarchy plugin remove theboxer71.omnitiler
 Clone the repository, then run the installer:
 
 ```sh
-git clone https://github.com/TheBoxer71/OmniTiler.git
+git clone https://github.com/PixDevsApps/OmniTiler.git
 cd OmniTiler
 python3 manage.py install
 ```

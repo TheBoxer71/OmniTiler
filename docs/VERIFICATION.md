@@ -75,7 +75,7 @@ restored after testing. Hyprland configuration files remain unchanged.
 
 ## GitHub publication checks
 
-Repository: `https://github.com/TheBoxer71/OmniTiler`.
+Repository: `https://github.com/PixDevsApps/OmniTiler`.
 Before the initial commit and push, all 18 unit tests, manifest validation,
 and QML checks passed again. The live desktop results above record the earlier functional
 checks; documentation and artwork updates do not change runtime behavior.

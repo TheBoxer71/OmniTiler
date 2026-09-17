@@ -2,7 +2,7 @@
 
 **Name:** OmniTiler — Ultrawide Window Tiler for Omarchy
 
-**Repository:** https://github.com/TheBoxer71/OmniTiler
+**Repository:** https://github.com/PixDevsApps/OmniTiler
 
 **ID:** `theboxer71.omnitiler`
 
@@ -40,7 +40,7 @@ the usual workspace shortcuts to move windows between workspaces.
 
 ## Release preparation
 
-- Repository: [TheBoxer71/OmniTiler](https://github.com/TheBoxer71/OmniTiler).
+- Repository: [PixDevsApps/OmniTiler](https://github.com/PixDevsApps/OmniTiler).
 - Marketplace submission remains a separate step; no listing has been submitted.
 - Root manifest, README, MIT license, and screenshot are included.
 - Marketplace preview: root-level `preview.png` (1672×941 PNG promotional
